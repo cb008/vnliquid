@@ -1,0 +1,169 @@
+{
+  "menus": [
+    {
+      "name": "Home",
+      "children": [
+        {
+          "name": "Homepages",
+          "type": 1
+        },
+        {
+          "name": "Home - Normal",
+          "type": 0
+        },
+        {
+          "name": "Home - Icons category",
+          "type": 0
+        }
+      ]
+    },
+    {
+      "name": "Pages",
+      "children": [
+        {
+          "name": "Addons",
+          "type": 1
+        },
+        {
+          "name": "About us",
+          "type": 0
+        },
+        {
+          "name": "Contact",
+          "type": 0
+        },
+        {
+          "name": "Not found 404",
+          "type": 0
+        },
+        {
+          "name": "Login & Register",
+          "type": 0
+        }
+      ]
+    },
+    {
+      "name": "Blog",
+      "children": [
+        {
+          "name": "Blog categories",
+          "type": 1
+        },
+        {
+          "name": "Blog - grid",
+          "type": 0
+        },
+        {
+          "name": "Blog - list",
+          "type": 0
+        },
+        {
+          "name": "Blog - fullpage",
+          "type": 0
+        },
+        {
+          "name": "Blog articles",
+          "type": 1
+        },
+        {
+          "name": "Article - single",
+          "type": 0
+        },
+        {
+          "name": "Article - right menu",
+          "type": 0
+        }
+      ]
+    },
+    {
+      "name": "Shop",
+      "children": [
+        {
+          "name": "Products",
+          "type": 1
+        },
+        {
+          "name": "Product categories",
+          "type": 0
+        },
+        {
+          "name": "Products grid",
+          "type": 0
+        },
+        {
+          "name": "Products list",
+          "type": 0
+        },
+        {
+          "name": "Products topbar",
+          "type": 0
+        },
+        {
+          "name": "Product overview",
+          "type": 0
+        },
+        {
+          "name": "Product overview simple",
+          "type": 0
+        }
+      ]
+    },
+    {
+      "name": "Checkout",
+      "children": [
+        {
+          "name": "Checkout",
+          "type": 1
+        },
+        {
+          "name": "Checkout - Cart item",
+          "type": 0
+        },
+        {
+          "name": "Checkout - Delivery",
+          "type": 0
+        },
+        {
+          "name": "Checkout - Payment",
+          "type": 0
+        },
+        {
+          "name": "Checkout - Receipt",
+          "type": 0
+        }
+      ]
+    }
+  ],
+  "currencys": [
+    {
+      "id": 1,
+      "currency": "USD"
+    },
+    {
+      "id": 2,
+      "currency": "EUR"
+    },
+    {
+      "id": 3,
+      "currency": "GBP"
+    }
+  ],
+  "ENGS": [
+    {
+      "id": 1,
+      "eng": "ENG"
+    },
+    {
+      "id": 2,
+      "eng": "GER"
+    },
+    {
+      "id": 3,
+      "eng": "لعربية"
+    },
+    {
+      "id": 4,
+      "eng": "עִבְרִית"
+    }
+  ]
+}

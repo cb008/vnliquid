@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="http://localhost:3000/home.css">
+  <link rel="stylesheet" type="text/css" href="http://localhost:3000/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  {% block header %}
+      <header>
+        <section class="banner-top">
+          <div class="banner-top-contanier">
+            <p>{{data.headjson.bannerTop}}</p>
+          </div>
+        </section>
+      </header>
+  {% endblock %}
+  {% block main %}{% endblock %}
+ 
+  {% block foot %}
+      <script src="http://localhost:3000/bootstrap/js/bootstrap.min.js"></script>
+  {% endblock %}
+</body>
+
+</html>
