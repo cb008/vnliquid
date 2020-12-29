@@ -1,0 +1,36 @@
+
+.scroll-banner{
+  position: relative;
+  width: 100%;
+  height:6.9rem;
+  background: #2F2F2FFF;
+  margin: 0 auto;
+  color: #fff;
+  line-height: 6.9rem;
+  text-align: center;
+}
+.scroll-banner-content {
+  height:6.9rem;
+  overflow:hidden;
+  
+}
+.scroll-banner-content > div > div {
+  color:#fff;
+  font-size: 3.2rem;
+  line-height:6.9rem;
+  margin-bottom:6.9rem;
+  display:inline-block;
+}
+.scroll-banner-content div:first-child {
+   animation: show 10s linear infinite;
+}
+@keyframes show {
+  0% {margin-top:-3.45rem;}
+  5% {margin-top:-13.8rem;}
+  33% {margin-top:-13.8rem;}
+  38% {margin-top:-27.6rem;}
+  66% {margin-top:-27.6rem;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-41.4rem;}
+}

@@ -1,0 +1,25 @@
+.banner{
+  width: 100%;
+  height: 17rem;
+
+}
+.carousel-inner img{
+  width: 100%;
+}
+.glyphicon{
+  top: 8.5rem;
+}
+.glyphicon img {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.carousel-indicators li {
+  
+background: #F1F1F1;
+border: 1px solid #979797;
+}
+.carousel-indicators .active {
+  background: none;
+  border: 1px solid #DF0052;
+}

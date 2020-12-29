@@ -4,27 +4,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="http://localhost:3000/home.css">
-  <link rel="stylesheet" type="text/css" href="http://localhost:3000/bootstrap/css/bootstrap.min.css">
+  <title>VSHOP</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="../assets/css/normalize.css"> -->
+  {% for link in INDEX.STYLE %}
+  <link rel="stylesheet" href="{{ link }}">
+  {% endfor %}
 </head>
 
 <body>
+  <section>
+    <div class="notice">
+      {% block notice %}{% endblock %}
+    </div>
+  </section>
+  <section>
+    <div class="nav">
+      {% block nav %}{% endblock %}
+    </div>
+  </section>
+  <section>
+    <div class="banner">
+      {% block banner %}{% endblock %}
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      {% block container %}{% endblock %}
+    </div>
+  </section>
+  <section>
+    <div class="footer">
+      {% block footer %}{% endblock %}
+    </div>
+  </section>
 
-  {% block header %}
-      <header>
-        <section class="banner-top">
-          <div class="banner-top-contanier">
-            <p>{{data.headjson.bannerTop}}</p>
-          </div>
-        </section>
-      </header>
-  {% endblock %}
-  {% block main %}{% endblock %}
- 
-  {% block foot %}
-      <script src="http://localhost:3000/bootstrap/js/bootstrap.min.js"></script>
-  {% endblock %}
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  {% for item in INDEX.SCRIPTS %}
+  <script src="{{item}}"></script>
+  {% endfor %}
 </body>
 
 </html>
