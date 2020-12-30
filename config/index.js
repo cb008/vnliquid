@@ -1,4 +1,4 @@
-const BASE_URL = '../assets/'
+const BASE_URL = '../../assets/'
 
 const INDEX = {
   TITLE: 'VANGO商场',
