@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VSHOP</title>
   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../node_modules/swiper/dist/css/swiper.min.css">
+  <link rel="stylesheet" href="../assets/css/theme.css">
   <!-- <link rel="stylesheet" href="../assets/css/normalize.css"> -->
   {% for link in INDEX.STYLE %}
   <link rel="stylesheet" href="{{ link }}">
@@ -29,8 +31,8 @@
     </div>
   </section>
   <section>
-    <div class="container">
-      {% block container %}{% endblock %}
+    <div class="vcontainer">
+      {% block vcontainer %}{% endblock %}
     </div>
   </section>
   <section>
@@ -41,6 +43,7 @@
 
   <script src="../node_modules/jquery/dist/jquery.min.js"></script>
   <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
   {% for item in INDEX.SCRIPTS %}
   <script src="{{item}}"></script>
   {% endfor %}

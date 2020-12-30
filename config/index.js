@@ -6,6 +6,8 @@ const INDEX = {
     BASE_URL + 'css/notice.css',
     BASE_URL + 'css/nav.css',
     BASE_URL + 'css/banner.css',
+    BASE_URL + 'css/home.css',
+    BASE_URL + 'css/productItem.css',
 
   ],
   SCRIPTS: [
