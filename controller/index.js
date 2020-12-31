@@ -1,3 +1,4 @@
+
 const fs = require("fs");
 const path = require("path");
 const stat = fs.stat
@@ -8,7 +9,8 @@ const engine = new Liquid({
   extname: '.liquid'
 });
 
-const { VERSION } = require('../config/version')
+
+
 const { INDEX1 } = require('../config/index1')
 const { INDEX2 } = require('../config/index2');
 const { Console } = require("console");
@@ -18,7 +20,7 @@ var domain = 'chenbin'
 var language = 'it'
 var DATA = INDEX1
 var templateAssets = 'template1'
-function home(req, res, next) {
+function index(req, res, next) {
   const data = JSON.parse(fs.readFileSync(`config/${domain}/head.json`));
   const banners = JSON.parse(fs.readFileSync(`config/${domain}/banner.json`));
   domain = req.query.domain
@@ -32,16 +34,18 @@ function home(req, res, next) {
     DATA = INDEX2
     templateAssets = 'template2'
   }
-  console.log(DATA)
   res.render(template, { INDEX: DATA, data, banners }, (err, html) => {
     if (err) {
       console.log('模板渲染失败!' + err)
     } else {
       mkdir(domain)
       copy(path.join(__dirname, '../', '/assets/', templateAssets), path.join(__dirname, '../', '/build/', domain, '/assets'))
-      let file = path.resolve(path.join(__dirname, '../', '/build/', domain), './home.html'); //在对应的店铺文件下生成一个html
+      let file = path.resolve(path.join(__dirname, '../', '/build/', domain), './home.html'); //在对应的店铺文件下生成一个home.html
       fs.writeFile(file, html, { encoding: 'utf8' }, err => {
-        console.log('html文件创建失败!')
+        if (err) {
+          console.log('html文件创建失败!')
+        }
+
       });
     }
     next()
@@ -75,7 +79,6 @@ function mkdir(dirname) {
     }
   })
 }
-
 function copy(src, dst) {
   //读取目录
   fs.readdir(src, function (err, paths) {
@@ -92,7 +95,6 @@ function copy(src, dst) {
         if (err) {
           throw err;
         }
-
         if (st.isFile()) {
           readable = fs.createReadStream(_src);//创建读取流
           writable = fs.createWriteStream(_dst);//创建写入流
@@ -104,7 +106,6 @@ function copy(src, dst) {
     });
   });
 }
-
 function exists(src, dst, callback) {
   //测试某个路径下文件是否存在
   fs.exists(dst, function (exists) {
@@ -117,8 +118,12 @@ function exists(src, dst, callback) {
     }
   })
 }
-
+function switchLanguage(v) {
+  const lan = JSON.parse(fs.readFileSync(`./locales/${language}.json`));
+  let a = v.split('.')
+  return lan[a[0]][a[1]]
+}
 
 module.exports = {
-  home
+  index, switchLanguage
 }

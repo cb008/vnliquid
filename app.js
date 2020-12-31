@@ -8,6 +8,11 @@ const engine = new Liquid({
   root: __dirname, // for layouts and partials
   extname: '.liquid'
 })
+const { switchLanguage } = require('./controller/index')
+engine.registerFilter('t', v => { // 注册语言包过滤器
+  return switchLanguage(v)
+})
+
 const indexRouter = require('./routes/index');
 app.engine('liquid', engine.express()) // register liquid engine
 app.set('views', ['./assets', './templates', './layout']) // specify the views directory
@@ -21,3 +26,5 @@ app.listen(3000, function () {
 })
 
 module.exports = app
+
+

@@ -16,7 +16,7 @@
   <link rel="icon" href="favicon.ico">
 
   <!--Title-->
-  <title>{{indexStatic.INDEX.TITLE}}</title>
+  <title>{{INDEX.TITLE}}</title>
 
   <!--CSS bundle -->
   {% for item in INDEX.STYLE %}
@@ -45,7 +45,7 @@
 
   <div class="wrapper">
 
-    {% render './sections/header.liquid',data:data %}
+    {% render './sections/header.liquid',data: data %}
 
     <!-- ========================  Header content ======================== -->
 
@@ -59,7 +59,7 @@
 
           <!--Slide item-->
 
-          <div class="item d-flex align-items-center" style="background-image:url(./assets{{banners.banners[0].img}})">
+          <div class="item d-flex align-items-center" style="background-image:url(./assets/images/slide-3.jpg)">
             <div class="container">
               <div class="caption">
                 <div class="animated" data-start="fadeInUp">
@@ -96,7 +96,7 @@
 
           <!--Slide item-->
 
-          <div class="item d-flex align-items-center" style="background-image:url(./assets{{banners.banners[1].img}})">
+          <div class="item d-flex align-items-center" style="background-image:url(./assets/images/slide-1.jpg)">
             <div class="container">
               <div class="caption">
                 <div class="animated" data-start="fadeInUp">
@@ -133,7 +133,7 @@
 
           <!--Slide item-->
 
-          <div class="item d-flex align-items-center" style="background-image:url(./assets{{banners.banners[2].img}})">
+          <div class="item d-flex align-items-center" style="background-image:url(./assets/images/slide-2.jpg)">
             <div class="container">
               <div class="caption">
                 <div class="promo text-center">
