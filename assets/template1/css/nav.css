@@ -1,0 +1,53 @@
+.nav-box {
+  width: 100%;
+  height: 0.88rem;
+  padding: 0.01rem 0.32rem;
+  line-height:0.88rem;
+  position: relative;
+}
+.nav-box .menu{
+  width: 0.42rem;
+  height:0.3rem;
+  border: 1px solid #000;
+  position: absolute;
+  left: 0.42rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.nav-box .logo{
+  width: 1.46rem;
+  height: 0.64rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  line-height: 0.64rem;
+  text-align: center;
+  font-size: 0.56rem;
+  font-family: PTSans-Bold, PTSans;
+  font-weight: bold;
+  color: #000000;
+  letter-spacing: 1px;
+  /* text-decoration:line-through;  */
+}
+
+.nav-box .tool-icon{
+  color: #fff;
+  height: 0.64rem;
+  position: absolute;
+  right: 0.42rem;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height:  0.64rem;
+}
+.nav-box .tool-icon div{
+  float: left;
+  width: auto;
+  height: 0.31rem;
+  margin-left:  0.32rem;
+}
+.nav-box .tool-icon img {
+  display: inline-block;
+  width: 0.31rem;
+  height: 0.31rem;
+}

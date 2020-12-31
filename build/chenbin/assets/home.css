@@ -1,0 +1,83 @@
+.clearfix::after {
+  clear: both;
+  display: block;
+  content: '';
+  line-height: 1;
+}
+.banner-top{
+  width: 100%;
+
+}
+.banner-top-contanier{
+  width: 1080px;
+  height: 37px;
+  background: #000000;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+}
+.banner-top-contanier p{
+  margin: 0;
+  line-height: 37px;
+}
+
+.header{
+  width: 1080px;
+  height: 58px;
+  margin: 0 auto;
+}
+.header-box{
+  padding:19px 89px;
+}
+.logo{
+  float: left;
+  width: 89px;
+  height: 46px;
+  font-size: 31px;
+  font-family: Aileron-Bold, Aileron;
+  font-weight: bold;
+  color: #000000;
+  line-height: 37px;
+  text-decoration:line-through; 
+  margin-right: 15px;
+}
+.currency{
+  float: left;
+  height: 46px;
+  line-height: 37px;
+  margin-right: 27px;
+}
+.currency-icon img{
+  width: 21px;
+  height: 14px;
+  background: #B72343;
+}
+.currency-name{
+  width: 20px;
+  height: 12px;
+  font-size: 10px;
+  font-family: Aileron-Regular, Aileron;
+  font-weight: 400;
+  color: #000000;
+  line-height: 12px;
+}
+.header-search{
+  float: left;
+  background: #FFFFFF;
+  box-shadow: -1px 2px 6px 0px rgba(0,0,0,0.08);
+  border-radius: 2px;
+  border: 1px solid #D8D8D8;
+}
+.header-search input {
+    width: 512px;
+    height: 39px;
+    border:none
+}
+.header-search .submit{
+  display: inline-block;
+  height: 39px;
+  width: 32px;
+}
+.icon{
+  float: left;
+}
